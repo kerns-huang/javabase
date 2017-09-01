@@ -8,6 +8,7 @@ import org.junit.Before;
 import org.junit.Test;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 import java.util.Scanner;
 
@@ -29,6 +30,7 @@ public class BallTest {
         list.add(new Ball(3l, "黄色"));
         list.add(new Ball(4l, "黑色"));
         list.add(new Ball(5l, "白色"));
+        Collections.sort(list);
     }
 
     /**
@@ -40,22 +42,10 @@ public class BallTest {
         for (Ball ball : list) {
             chance.add(ball);
         }
+
     }
 
 
-    public static void main(String[] args) {
-        // TODO Auto-generated method stub
-        Scanner sc = new Scanner(System.in);
-        int a = sc.nextInt(), b = sc.nextInt();
-        int an = find(a, b);
-        System.out.println(an);
-    }
 
-    public static int find(int a, int b) {
-        if (a < b) return 0;
-        if (a == b) return 1;
-        if (b == 0) return 1;
-        return find(a - 1, b - 1) + find(a - 1, b);
-    }
 
 }

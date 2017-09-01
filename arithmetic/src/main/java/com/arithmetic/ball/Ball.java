@@ -51,6 +51,6 @@ public class Ball implements Comparable<Ball> {
 
     @Override
     public int compareTo(Ball o) {
-        return 0;
+        return Long.compare(this.id, o.id);
     }
 }
