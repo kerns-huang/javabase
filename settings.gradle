@@ -1,4 +1,6 @@
 rootProject.name = 'javabase'
 include 'rpc'
 include 'arithmetic'
+include 'thread'
+include 'javascript'
 
